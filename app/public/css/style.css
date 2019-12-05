@@ -1,12 +1,31 @@
+html {
+  background-color: gainsboro;
+}
+
+.card {
+  min-width: 23%;
+}
+
+.card-body {
+  height: 75%;
+}
+
 .our-card {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
   height: 75vh;
-  background-color: ghostwhite;
+  width: 50vw;
+  background-color: #636483; /* lightsteelblue/ghostwhite as other option*/
+  color: gainsboro;
+  margin: 0px 50px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.4) 4px 3px 8px;
 }
 
 #main {
   display: flex;
-  justify-content: space-around;
+  margin-top: 6%;
+  background-color: gainsboro;
+  justify-content: center;
   align-items: center;
 }
 
