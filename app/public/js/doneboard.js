@@ -2,7 +2,7 @@
 
 
 
-// Below is tutor's javascript/jquery code. Using this js file, which is not liked anywhere, as a backup.
+// Below is tutor's javascript/jquery code. This is not linked anywhere. This is essentially backup code and can be disregarded.
 
 
 

@@ -62,5 +62,19 @@ html {
 
 .to-do-modal {
   display: flex;
+}
 
+#taskTitleModal {
+  width: 95%;
+  margin: auto;
+}
+
+#taskDescriptionModal {
+  width: 95%;
+  margin: auto;
+}
+
+#taskNameModal {
+  width: 95%;
+  margin: auto;
 }
