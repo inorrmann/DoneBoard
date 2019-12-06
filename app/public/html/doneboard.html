@@ -17,7 +17,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous"> -->
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"
@@ -50,39 +49,28 @@
         <div class="card-body">
           <div class="card-header-mine">
             <div class="fa-2x">
-              <span class="fa-layers fa-fw">
-                <i class="fas fa-envelope"></i>
-                <span
-                  class="fa-layers-counter"
-                  style="background:Tomato"
-                ></span>
               </span>
             </div>
-            <span>To do list</span>
+            <span><h4>TaskBoard</h4></span>
             <a
               class="add-item"
               href="#"
               data-toggle="modal"
               data-target="#addItemModal"
-              ><i class="fas fa-plus"></i
-            ></a>
+            >
+              <i class="fas fa-plus"></i>
+            </a>
           </div>
-          <div class="todo-holder" ondrop="drop(event)" ondragover="allowDrop(event)"></div> <!--on drop-->
+          <div class="todo-holder"></div>
         </div>
       </div>
       <div id="in-progress" class="card our-card" style="width: 18rem;">
         <div class="card-body">
           <div class="card-header-mine">
             <div class="fa-2x">
-              <span class="fa-layers fa-fw">
-                <i class="fas fa-envelope"></i>
-                <span
-                  class="fa-layers-counter"
-                  style="background:Tomato"
-                ></span>
               </span>
             </div>
-            <span>In Progress</span>
+            <span><h4>In Progress</h4></span>
             <a
               class="add-item"
               href="#"
@@ -98,15 +86,9 @@
         <div class="card-body">
           <div class="card-header-mine">
             <div class="fa-2x">
-              <span class="fa-layers fa-fw">
-                <i class="fas fa-envelope"></i>
-                <span
-                  class="fa-layers-counter"
-                  style="background:Tomato"
-                ></span>
               </span>
             </div>
-            <span>Done</span>
+            <span><h4>DoneBoard</h4></span>
             <a
               class="add-item"
               href="#"
@@ -132,7 +114,9 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Please enter your task information below:</h5>
+            <h5 class="modal-title" id="exampleModalLabel">
+              Please enter your information below:
+            </h5>
             <button
               type="button"
               class="close"
@@ -142,9 +126,38 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+
+
+
+
+
           <div class="modal-body">
-            <span class="to-do-modal">Title: <input id="to-do-item-title" type="text" /></span>
-            <div class="to-do-modal">Task: <input id="to-do-item-task-description" type="text" /></div>
+            <div class="to-do-modal"
+              >Title: <input id="to-do-item-title" type="text"
+            /></div>
+            <div class="to-do-modal">
+              Task: <input id="to-do-item-task-description" type="text" />
+            </div>
+            <div class="to-do-modal">
+              Name: <input id="to-do-item-task-name" type="text" />
+            </div>
           </div>
           <div class="modal-footer">
             <button
