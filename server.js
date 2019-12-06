@@ -18,8 +18,8 @@ app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "/public")));
 
 // router connection (express)
-const apiRoutes = require("./routes/api-routes.js");
-const htmlRoutes = require("./routes/html-routes.js");
+const apiRoutes = require("./app/routes/api-routes");
+const htmlRoutes = require("./app/routes/html-routes.js");
 app.use("/api/", apiRoutes)
 app.use("/", htmlRoutes)
 

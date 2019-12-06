@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       },
       content: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false
       },
       progress_status: {
@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
         defaultValue: 0,
         validate: {
-            len: [0,3]
+            len: [0,2]
         }
       }
     });
