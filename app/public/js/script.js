@@ -8,11 +8,13 @@
     sendAlerts: boolean
 }
 ​
-status - Stage determines how we know which column to place a todo in
+status - status determines how we know which column to place a todo in
 */
+var todoTitle;
+
 var ourTodos = [
   {
-    title: "Do Laundry to do",
+    title: `${todoTitle}`, //we can add title task here
     id: 0,
     status: 0,
     createdAt: new Date(),
@@ -20,7 +22,7 @@ var ourTodos = [
     sendAlerts: false
   },
   {
-    title: "Do Laundry progress",
+    title: `${todoTitle}`,
     id: 1,
     status: 1,
     createdAt: new Date(),
@@ -28,7 +30,7 @@ var ourTodos = [
     sendAlerts: false
   },
   {
-    title: "Do Laundry done",
+    title: `${todoTitle}`,
     id: 2,
     status: 2,
     createdAt: new Date(),
@@ -37,7 +39,7 @@ var ourTodos = [
   }
 ];
 $("#save-changes").click(function() {
-  const input = $("#to-do-item").val();
+  const input = $("#to-do-item-title").val();
   //making a request to backend to save it to database.
   ourTodos.push({
     title: input,
@@ -46,9 +48,31 @@ $("#save-changes").click(function() {
     deadline: new Date("12/05/2019"),
     sendAlerts: false
   });
-  $("#to-do-item").val("");
+  $("#to-do-item-title").val("");
   placeTodos();
 });
+
+// drag and drop below
+// ============================================================================================================
+// ============================================================================================================
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+// `<span id="drag1" draggable="true" ondragstart="drag(event)" width="336" height="69"></span>`
+
+// ============================================================================================================
+// drag and drop above
 
 $(document).on("click", ".next-status", function() {
   const currentId = +$(this).attr("data-id");
@@ -74,7 +98,7 @@ function placeTodos() {
     $(`#${statusMap[todo.status]} .todo-holder`).append(
       `<p class="todo-child">${todo.title}</p>${
         todo.status === 0 || todo.status === 1
-          ? `<button class="next-status" data-id="${todo.id}">Increase status</button>`
+          ? `<button class="next-status todo-holder" draggable="true" ondragstart="drag(event)" data-id="${todo.id}">Increase status</button>`
           : ""
       }`
     );
