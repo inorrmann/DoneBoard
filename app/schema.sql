@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS doneboard_db;
+CREATE DATABASE doneboard_db;
 USE doneboard_db;
 
 INSERT INTO Users (first_name, last_name, username, password, email, phone_number)
