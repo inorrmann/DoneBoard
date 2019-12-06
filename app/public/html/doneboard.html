@@ -67,7 +67,7 @@
               ><i class="fas fa-plus"></i
             ></a>
           </div>
-          <div class="todo-holder"></div>
+          <div class="todo-holder" ondrop="drop(event)" ondragover="allowDrop(event)"></div> <!--on drop-->
         </div>
       </div>
       <div id="in-progress" class="card our-card" style="width: 18rem;">
@@ -132,7 +132,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Please enter your task information below:</h5>
             <button
               type="button"
               class="close"
@@ -143,7 +143,8 @@
             </button>
           </div>
           <div class="modal-body">
-            <input id="to-do-item" type="text" />
+            <span class="to-do-modal">Title: <input id="to-do-item-title" type="text" /></span>
+            <div class="to-do-modal">Task: <input id="to-do-item-task-description" type="text" /></div>
           </div>
           <div class="modal-footer">
             <button
