@@ -17,6 +17,12 @@ app.set("view engine", "hbs");
 
 app.use(express.static(path.join(__dirname, "/public")));
 
+// router connection (express)
+const apiRoutes = require("./routes/api-routes.js");
+const htmlRoutes = require("./routes/html-routes.js");
+app.use("/api/", apiRoutes)
+app.use("/", htmlRoutes)
+
 db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
