@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
         defaultValue: 0,
         validate: {
-          len: [0, 3]
+            len: [0,2]
         }
       }
     },
@@ -41,4 +41,4 @@ module.exports = function(sequelize, DataTypes) {
 
   return Task;
 };
-// NEEDS ASSOCIATION
+
