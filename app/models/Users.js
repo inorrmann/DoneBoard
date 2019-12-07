@@ -36,7 +36,8 @@ module.exports = function(sequelize, DataTypes) {
     // one user belongsTo one realtionship
     User.belongsTo(models.User_Project_Relationship, {
       foreignKey: {
-        allowNull: true
+        allowNull: true,
+        defaultValue: null
       }
     });
     // user has many tasks
