@@ -1,5 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-    const User = sequelize.define("User", {
+  const User = sequelize.define(
+    "User",
+    {
       first_name: {
         type: DataTypes.STRING,
         allowNull: false
@@ -24,8 +26,26 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       }
+    },
+    // timestamps removed option for seeding db
+    // remove when ready fro createdAt columns
+    { timestamps: false }
+  );
+  // association
+  User.associate = function(models) {
+    // one user belongsTo one realtionship
+    User.belongsTo(models.User_Project_Relationship, {
+      foreignKey: {
+        allowNull: false
+      }
     });
-  
-    return User;
+    // user has many tasks
+    User.hasMany(models.Task, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
-  
+
+  return User;
+};

@@ -1,27 +1,28 @@
 module.exports = function(sequelize, DataTypes) {
-  const Relationship = sequelize.define("Relationship", {
-    project_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+  const User_Project_Relationship = sequelize.define(
+    "User_Project_Relationship",
+    {
+      // timestamps removed option for seeding db
+      // remove when ready fro createdAt columns
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    }
-  });
+    { timestamps: false }
+  );
 
-  Relationship.associate = function(models) {
-    Relationship.hasMany(models.User, {
+  // association
+  User_Project_Relationship.associate = function(models) {
+    // one realtionship has many users
+    User_Project_Relationship.hasMany(models.User, {
       foreignKey: {
         allowNull: false
       }
     });
-    Relationship.hasMany(models.Project, {
+    // one relationship has many projects
+    User_Project_Relationship.hasMany(models.Project, {
       foreignKey: {
         allowNull: false
       }
     });
   };
 
-  return Relationship;
+  return User_Project_Relationship;
 };
