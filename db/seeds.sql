@@ -10,6 +10,6 @@ VALUES ("Jordan", "McQuiston", "JordanCley","1234567","jordan@thehnrl.com", "765
 INSERT INTO Projects (title, UserProjectRelationshipId)
 VALUES ("Project1", 1), ("Project2", 2), ("Project3", 3);
 
-INSERT INTO Tasks (name, content, progress_status, ProjectId)
-VALUES ("Create database", "lorem23 dgsljnsdg sdlgksdjg sdjglsdgl kdjfgsldgj", 0, 1),
-        ("Create routes", "lorem23 dgsljnsdg sdlgksdjg sdjglsdgl kdjfgsldgj", 0, 2);
+INSERT INTO Tasks (name, content, progress_status, ProjectId, UserId)
+VALUES ("Create database", "lorem23 dgsljnsdg sdlgksdjg sdjglsdgl kdjfgsldgj", 0, 1, 1),
+        ("Create routes", "lorem23 dgsljnsdg sdlgksdjg sdjglsdgl kdjfgsldgj", 0, 2, 2);
