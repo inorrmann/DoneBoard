@@ -1,9 +1,9 @@
 html {
-  background-color: gainsboro;
+  background-color: #B2B3CF;
 }
 
 .card {
-  min-width: 23%;
+  min-width: 28%;
 }
 
 .card-body {
@@ -15,8 +15,8 @@ html {
   font-weight: 700;
   height: 75vh;
   width: 50vw;
-  background-color: #636483; /* lightsteelblue/ghostwhite as other option*/
-  color: gainsboro;
+  background-color: #232436; /* lightsteelblue/ghostwhite as other option. also 636483*/ 
+  color: whitesmoke;
   margin: 0px 50px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.4) 4px 3px 8px;
 }
@@ -24,7 +24,7 @@ html {
 #main {
   display: flex;
   margin-top: 6%;
-  background-color: gainsboro;
+  background-color: #B2B3CF;
   justify-content: center;
   align-items: center;
 }
@@ -46,4 +46,35 @@ html {
 
 .add-item:active {
   transform: scale(1.1);
+}
+
+/* Modal */
+
+.modal-content {
+  background-color: #232436;
+  color: gainsboro;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+}
+
+.to-do-modal {
+  display: flex;
+}
+
+#taskTitleModal {
+  width: 95%;
+  margin: auto;
+}
+
+#taskDescriptionModal {
+  width: 95%;
+  margin: auto;
+}
+
+#taskNameModal {
+  width: 95%;
+  margin: auto;
 }

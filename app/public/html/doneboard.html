@@ -17,7 +17,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous"> -->
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"
@@ -50,22 +49,17 @@
         <div class="card-body">
           <div class="card-header-mine">
             <div class="fa-2x">
-              <span class="fa-layers fa-fw">
-                <i class="fas fa-envelope"></i>
-                <span
-                  class="fa-layers-counter"
-                  style="background:Tomato"
-                ></span>
               </span>
             </div>
-            <span>To do list</span>
+            <span><h4>TaskBoard</h4></span>
             <a
               class="add-item"
               href="#"
               data-toggle="modal"
               data-target="#addItemModal"
-              ><i class="fas fa-plus"></i
-            ></a>
+            >
+              <i class="fas fa-plus"></i>
+            </a>
           </div>
           <div class="todo-holder"></div>
         </div>
@@ -74,15 +68,9 @@
         <div class="card-body">
           <div class="card-header-mine">
             <div class="fa-2x">
-              <span class="fa-layers fa-fw">
-                <i class="fas fa-envelope"></i>
-                <span
-                  class="fa-layers-counter"
-                  style="background:Tomato"
-                ></span>
               </span>
             </div>
-            <span>In Progress</span>
+            <span><h4>In Progress</h4></span>
             <a
               class="add-item"
               href="#"
@@ -98,15 +86,9 @@
         <div class="card-body">
           <div class="card-header-mine">
             <div class="fa-2x">
-              <span class="fa-layers fa-fw">
-                <i class="fas fa-envelope"></i>
-                <span
-                  class="fa-layers-counter"
-                  style="background:Tomato"
-                ></span>
               </span>
             </div>
-            <span>Done</span>
+            <span><h4>DoneBoard</h4></span>
             <a
               class="add-item"
               href="#"
@@ -132,7 +114,9 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">
+              Please enter your information below:
+            </h5>
             <button
               type="button"
               class="close"
@@ -142,25 +126,41 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <input id="to-do-item" type="text" />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button
-              data-dismiss="modal"
-              id="save-changes"
-              type="button"
-              class="btn btn-primary"
-            >
-              Save changes
-            </button>
+<!-- Inside the modal form-->
+          <form>
+            <div class="form-group">
+              <label for="taskTitleModal">Title</label>
+              <input type="text" class="form-control" id="taskTitleModal" placeholder="Enter task title">
+            </div>
+
+            <div class="form-group">
+              <label for="taskDescriptionModal">Task</label>
+              <textarea type="text" class="form-control" id="taskDescriptionModal" placeholder="Enter task">
+              </textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="taskNameModal">Name</label>
+              <input type="text" class="form-control" id="taskNameModal" placeholder="Enter name">
+            </div>
+
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                data-dismiss="modal"
+                id="save-changes"
+                type="submit"
+                class="btn btn-primary"
+              >
+                Save changes
+              </button>
+            </form>
           </div>
         </div>
       </div>
