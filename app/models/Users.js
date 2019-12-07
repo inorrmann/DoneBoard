@@ -36,13 +36,13 @@ module.exports = function(sequelize, DataTypes) {
     // one user belongsTo one realtionship
     User.belongsTo(models.User_Project_Relationship, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
     // user has many tasks
     User.hasMany(models.Task, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };

@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
     // project has many tasks
     Project.hasMany(models.Task, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
     // one project belongsTo one realtionship
