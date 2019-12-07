@@ -35,15 +35,15 @@ module.exports = function(sequelize, DataTypes) {
   User.associate = function(models) {
     // one user belongsTo one realtionship
     User.belongsTo(models.User_Project_Relationship, {
-      foreignKey: {
-        allowNull: false
-      }
+      // foreignKey: {
+      //   allowNull: false
+      // }
     });
     // user has many tasks
     User.hasMany(models.Task, {
-      foreignKey: {
-        allowNull: false
-      }
+      // foreignKey: {
+      //   allowNull: false
+      // }
     });
   };
 
