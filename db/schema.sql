@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS doneboard_db;
+CREATE DATABASE doneboard_db;
