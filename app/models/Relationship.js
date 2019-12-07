@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
     // one realtionship has many users
     User_Project_Relationship.hasMany(models.User, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
     // one relationship has many projects
