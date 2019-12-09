@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   const Project = sequelize.define(
     "Project",
     {
@@ -13,20 +13,25 @@ module.exports = function(sequelize, DataTypes) {
   );
 
   // association
-  Project.associate = function(models) {
+  Project.associate = function (models) {
     // project has many tasks
     Project.hasMany(models.Task, {
-      foreignKey: {
-        allowNull: true
-      }
-      // onDelete: "cascade"
+      // foreignKey: {
+      //   allowNull: true
+      // }
+      onDelete: "cascade"
     });
-    // one project belongsTo one realtionship
-    Project.belongsTo(models.User_Project_Relationship, {
-      foreignKey: {
-        allowNull: false
-      }
+    // // one project belongsTo one realtionship
+    // Project.belongsTo(models.User_Project_Relationship, {
+    //   foreignKey: {
+    //     allowNull: false
+    //   }
+    // });
+    Project.belongsToMany(models.User, {
+      through: 'UserProject',
+      foreignKey: 'UserId'
     });
+
   };
 
   return Project;
