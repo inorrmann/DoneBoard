@@ -1,6 +1,3 @@
-html {
-  background-color: #232436;
-}
 
 .card {
   min-width: 28%;
@@ -80,87 +77,70 @@ html {
 }
 /* beginning of index.html */
 
-.our-card {
-  height: 75vh;
-  background-color: ghostwhite;
-  box-shadow: rgba(0, 0, 0, 0.4) 4px 3px 8px;
-}
 
-#main {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 
-.card-header-mine {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.add-item {
-  transform: scale(1);
-  transition: all 0.5s;
-}
-
-.add-item:hover {
-  transform: scale(1.3);
-}
-
-.add-item:active {
-  transform: scale(1.1);
-}
 /* the above is css for board.html */
 
 /* below is css for index.html */
-
-.lead {
-    text-align: center;
-   /* background-color: #A7D2E8 */
+.index-body{
+  background-color: #232436;
 }
-/* .container{
-    background-color: indigo;
-} */
-/* #user-info{
-  /* background-color:  #6f4ae6; */
-  /* margin-top: 200px; */
+.lead {
+  text-align: center;
+ /* background-color: #A7D2E8 */
+}
+.index-container{
+  background-color: #B2B3CF;
+} 
 
-/* } */ 
+/* #user-info{
+ background-color:  #6f4ae6; 
+ margin-top: 200px;
+
+}  */
 .instructions{
-    color: lightgray;
-    text-align: center;
+  color: black;
+  text-align: center;
 }
 .jumbotron-fluid{
-    background-color: #232436;
+  background-color: #232436;
 }
 .signup {
-  margin-left: 590px;
+margin-left: 590px;
+display: block;
+flex: center;
+background-color:  #B2B3CF;
+}
+
+/* input-bar is for user information */
+.input-bar{
+    width: 25%;
+   margin: auto;
+    display: block;
+    flex: center; 
+    color: whitesmoke;
+
+
+}
+.submit{
+  margin: auto;
   display: block;
   flex: center;
-  background-color:  #6f4ae6;
-  }
-/* input-bar is for user information */
-  .input-bar{
-      width: 25%;
-     margin: auto;
-      display: block;
-      flex: center; 
-      color: black;
   
-  }
-  .submit{
-    margin: auto;
-    display: block;
-    flex: center;
-    
 
-  }
-  .index-title{
-    color: white;
-    text-align: center;
-    font-family: "Karla", sans-serif;
-    font-weight: 800;
-  }
-  .form-control{
-    color: white
-  }
+}
+.index-title{
+  color: white;
+  text-align: center;
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+}
+.form-control{
+  color: white
+}
+
+.class-info{
+color: white;
+}
+
+
