@@ -19,6 +19,7 @@ module.exports = function(sequelize, DataTypes) {
       foreignKey: {
         allowNull: true
       }
+      // onDelete: "cascade"
     });
     // one project belongsTo one realtionship
     Project.belongsTo(models.User_Project_Relationship, {
