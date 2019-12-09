@@ -16,14 +16,14 @@ router.get("/users", function (req, res) {
 });
 
 // this one is not working!
-// router.delete("/users/:id", function(req, res) {
-//     db.User.destroy({
-//         where: {
-//             id: req.params.id
-//         }
-//     }).then(function(dbUser) {
-//         res.json(dbUser);
-//     });
-// });
+router.delete("/users/:id", function(req, res) {
+    db.User.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(function(dbUser) {
+        res.json(dbUser);
+    });
+});
 
 module.exports = router

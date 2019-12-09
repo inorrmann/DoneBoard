@@ -28,7 +28,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     // timestamps removed option for seeding db
-    // remove when ready fro createdAt columns
+    // remove when ready for createdAt columns
     { timestamps: false }
   );
   // association
