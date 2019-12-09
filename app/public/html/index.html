@@ -17,6 +17,7 @@
       integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
       crossorigin="anonymous"
     />
+    <!-- <link rel="stylesheet" href="../css/index.css"> -->
     <link rel="stylesheet" href="../css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Karla:200i,400,700,800&display=swap"
@@ -28,9 +29,9 @@
     <!-- script css -->
   </head>
 
-  <body>
+  <body class="index-body">
     <div id= "user-info" class="jumbotron jumbotron-fluid" >
-      <div class="container">
+      <div class="index-container">
         <h1 class="index-title">DoneBoard</h1>
         <p class="instructions">Please enter your user information below.</p>
         <div class="text-center">
@@ -47,7 +48,7 @@
       <!-- <button type="button" class="btn btn-secondary btn-lg">Large button</button> -->
     </div>
     <div id="log-in" class="jumbotron jumbotron-fluid">
-            <div class="container">
+            <div class="index-container">
               <h1 class="index-title">Log-in</h1>
               <p class="instructions">Please enter your email and password.</p>
             </div>
@@ -82,7 +83,7 @@
           </div>
           
           <div class="jumbotron jumbotron-fluid">
-                <div class="container">
+                <div class="index-container">
                     <!-- <div class="row">
                         <div class= "col-md-6">
 
@@ -97,12 +98,12 @@
                 
                 <form>
                         <div class="input-bar">
-                                <label for="exampleFormControlInput1">First Name</label>
+                                <label for ="exampleFormControlInput1" class="signup-info">First Name</label>
                                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
                               </div>
                        
                         <div class="input-bar">
-                                <label for="exampleFormControlInput1">Last Name</label>
+                                <label for= "exampleFormControlInput1" class="signup-info" >Last Name</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
                               </div>
                               <div class="input-bar">
@@ -111,9 +112,11 @@
                                   </div>
                                
                                   <div class="input-bar">
-                                        <label for="exampleFormControlInput1">Phone Number</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Phone Number">
-                                      </div>
+                                        <label for="phone">Phone Number</label>
+                                        <input class="form-control" type="tel" id="phone" name="phone"
+                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                        required placeholder="310-555-5555">
+                                                                        </div>
                               <div class="input-bar">
                                     <label for="exampleFormControlInput1">Username</label>
                                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username">
@@ -189,14 +192,14 @@
       Open modal for @getbootstrap
     </button> -->
 
-    <div
+   <!-- <div
       class="modal fade"
       id="exampleModal"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
-    >
+    > 
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -238,7 +241,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- <form>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>

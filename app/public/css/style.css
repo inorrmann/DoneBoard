@@ -1,5 +1,5 @@
 .doneboard {
-  background-color: #B2B3CF;
+  background-color: #b2b3cf;
 }
 
 .doneboard-card {
@@ -11,11 +11,11 @@
 }
 
 .doneboard-card {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 700;
   height: 75vh;
   width: 50vw;
-  /* background-color: #232436; /* lightsteelblue/ghostwhite as other option. also 636483*/  
+  /* background-color: #232436; /* lightsteelblue/ghostwhite as other option. also 636483*/
   color: whitesmoke;
   background-color: #232436;
   margin: 0px 50px 25px 25px;
@@ -25,7 +25,7 @@
 #doneboard-main {
   display: flex;
   margin-top: 6%;
-  background-color: #B2B3CF;
+  background-color: #b2b3cf;
   justify-content: center;
   align-items: center;
 }
@@ -87,81 +87,62 @@
   box-shadow: rgba(0, 0, 0, 0.4) 4px 3px 8px;
 }
 
-#main {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.card-header-mine {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.add-item {
-  transform: scale(1);
-  transition: all 0.5s;
-}
-
-.add-item:hover {
-  transform: scale(1.3);
-}
-
-.add-item:active {
-  transform: scale(1.1);
-}
 /* the above is css for board.html */
 
 /* below is css for index.html */
-
+.index-body {
+  background-color: #232436;
+}
 .lead {
-    text-align: center;
-   /* background-color: #A7D2E8 */
+  text-align: center;
+  /* background-color: #A7D2E8 */
 }
-/* .container{
-    background-color: indigo;
-} */
-/* #user-info{
-  /* background-color:  #6f4ae6; */
-  /* margin-top: 200px; */
+.index-container {
+  background-color: #b2b3cf;
+}
 
-/* } */ 
-.instructions{
-    color: lightgray;
-    text-align: center;
+/* #user-info{
+ background-color:  #6f4ae6; 
+ margin-top: 200px;
+
+}  */
+.instructions {
+  color: black;
+  text-align: center;
 }
-.jumbotron-fluid{
-    background-color: #232436;
+.jumbotron-fluid {
+  background-color: #232436;
 }
 .signup {
   margin-left: 590px;
   display: block;
   flex: center;
-  background-color:  #6f4ae6;
-  }
-/* input-bar is for user information */
-  .input-bar{
-      width: 25%;
-     margin: auto;
-      display: block;
-      flex: center; 
-      color: black;
-  
-  }
-  .submit{
-    margin: auto;
-    display: block;
-    flex: center;
-    
+  background-color: #b2b3cf;
+}
 
-  }
-  .index-title{
-    color: white;
-    text-align: center;
-    font-family: "Karla", sans-serif;
-    font-weight: 800;
-  }
-  .form-control{
-    color: white
-  }
+/* input-bar is for user information */
+.input-bar {
+  width: 25%;
+  margin: auto;
+  display: block;
+  flex: center;
+  color: whitesmoke;
+}
+.submit {
+  margin: auto;
+  display: block;
+  flex: center;
+}
+.index-title {
+  color: white;
+  text-align: center;
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+}
+.form-control {
+  color: white;
+}
+
+.class-info {
+  color: white;
+}
