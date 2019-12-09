@@ -133,3 +133,32 @@ function clearTodos() {
 }
 
 placeTodos();
+
+
+
+
+
+// Below is Robert's code that is now obsolete. We can delete later, but right now it is stored here for cautionary purposes.
+
+
+// logic for removing dashes in phone number. Not necessary, though. 
+// let phoneStr = phone.split("-").join().replace(/,/g, "");
+
+
+// regular expression email check function
+// ===========================================================================
+// function emailCheck() {
+//   if (/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/.test(email))
+//   {
+//     console.log(email)
+//     return (true)
+//   }
+//   console.log("Please enter a valid email address!")
+//   return (false)
+// }
+
+// emailCheck(email);
+// ===========================================================================
+
+// regex phone
+// /^(?([0-9]{3}))?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
