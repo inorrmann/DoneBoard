@@ -18,9 +18,13 @@ app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "/public")));
 
 // router connection (express)
-const apiRoutes = require("./app/routes/api-routes");
+const projectsApiRoutes = require("./app/routes/projects-api-routes");
+const tasksApiRoutes = require("./app/routes/tasks-api-routes");
+const userApiRoutes = require("./app/routes/user-api-routes");
 const htmlRoutes = require("./app/routes/html-routes.js");
-app.use("/api/", apiRoutes)
+app.use("/api/", projectsApiRoutes)
+app.use("/api/", tasksApiRoutes)
+app.use("/api/", userApiRoutes)
 app.use("/", htmlRoutes)
 
 db.sequelize.sync({}).then(function() {
