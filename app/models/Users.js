@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   const User = sequelize.define(
     "User",
     {
@@ -32,20 +32,26 @@ module.exports = function(sequelize, DataTypes) {
     { timestamps: false }
   );
   // association
-  User.associate = function(models) {
-    // one user belongsTo one realtionship
-    User.belongsTo(models.User_Project_Relationship, {
-      foreignKey: {
-        allowNull: true,
-        defaultValue: null
-      }
-    });
+  User.associate = function (models) {
+    // // one user belongsTo one realtionship
+    // User.belongsTo(models.User_Project_Relationship, {
+    //   foreignKey: {
+    //     allowNull: true,
+    //     defaultValue: null
+    //   }
+    // });
     // user has many tasks
     User.hasMany(models.Task, {
       foreignKey: {
         allowNull: true
       }
-      // onDelete: "cascade"
+      // onDelete: 'CASCADE'
+    });
+
+    User.belongsToMany(models.Project, {
+      through: 'UserProject',
+      foreignKey: 'ProjectId',
+      onDelete: 'CASCADE'
     });
   };
 
