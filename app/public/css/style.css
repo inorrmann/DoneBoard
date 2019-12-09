@@ -1,27 +1,28 @@
-html {
-  background-color: #232436;
+.doneboard {
+  background-color: #B2B3CF;
 }
 
-.card {
-  min-width: 28%;
+.doneboard-card {
+  min-width: 28% !important;
 }
 
 .card-body {
-  height: 75%;
+  height: 75% !important;
 }
 
-.our-card {
+.doneboard-card {
   font-family: 'Karla', sans-serif;
   font-weight: 700;
   height: 75vh;
   width: 50vw;
   /* background-color: #232436; /* lightsteelblue/ghostwhite as other option. also 636483*/  
   color: whitesmoke;
+  background-color: #232436;
   margin: 0px 50px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.4) 4px 3px 8px;
 }
 
-#main {
+#doneboard-main {
   display: flex;
   margin-top: 6%;
   background-color: #B2B3CF;
@@ -29,22 +30,22 @@ html {
   align-items: center;
 }
 
-.card-header-mine {
+.doneboard-card-header {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.add-item {
+.doneboard-add-item {
   transform: scale(1);
   transition: all 0.5s;
 }
 
-.add-item:hover {
+.doneboard-add-item:hover {
   transform: scale(1.3);
 }
 
-.add-item:active {
+.doneboard-add-item:active {
   transform: scale(1.1);
 }
 
@@ -82,7 +83,7 @@ html {
 
 .our-card {
   height: 75vh;
-  background-color: ghostwhite;
+  background-color: #232436;
   box-shadow: rgba(0, 0, 0, 0.4) 4px 3px 8px;
 }
 
