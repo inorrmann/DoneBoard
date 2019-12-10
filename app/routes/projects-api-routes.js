@@ -23,6 +23,16 @@ router.post("/projects", function (req, res) {
     });
 });
 
+router.delete("/projects/:id", function(req, res) {
+    db.Project.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(function(dbProject) {
+        res.json(dbProject)
+    });
+});
+
 // get all projects and include associated tasks and users
 router.get("/projects", function (req, res) {
     db.Project.findAll({

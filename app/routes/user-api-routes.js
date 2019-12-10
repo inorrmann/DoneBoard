@@ -18,7 +18,6 @@ router.get("/users", function (req, res) {
 
 // delete user will not delete a task
 router.delete("/users/:id", function(req, res) {
-    console.log(req.params.id);
     db.User.destroy({
         where: {
             id: req.params.id
