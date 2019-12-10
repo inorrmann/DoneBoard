@@ -41,22 +41,39 @@
     ></script>
     <title>Create Project!</title>
   </head>
-  <body class="projects-body">
-    <div class="container">
+  <body>
+    <div class="projects-body">
+      <div class="container">
         <form class="projects-form">
-            <div class="form-group">
-              <label for="projects-title">What's your project's title?</label>
-              <input type="text" class="form-control" id="projects-title" aria-describedby="titleHelp">
-              <small id="titleHelp" class="form-text text-muted">This will be your group project's title.</small>
+          <div class="form-group">
+            <label for="projects-title">What's your project's title?</label>
+            <input
+              type="text"
+              class="form-control"
+              id="projects-title"
+              aria-describedby="titleHelp"
+            />
+            <label for="add-collaborator">Add a collaborator</label>
+            <div  class="input-group mx-auto border rounded">
+              <input type="text" class="form-control" name="addCollab" />
+              <button type="submit" id="addCollab" class="border-0">Add</button>
             </div>
+            <div id="collabDiv"></div>
+            <!-- <small id="" class="form-text text-warning">
+              JordanCley
+            </small> -->
             <div class="form-group">
-              <label for="projects-layout">Please choose your project's layout</label>
-              <input type="text" class="form-control" id="projects-layout">
+              <label for="projects-layout"
+                >Please choose your project's layout</label
+              >
+              <input type="text" class="form-control" id="projects-layout" />
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+            <button type="submit" class="btn btn-secondary">Create</button>
+          </div>
+        </form>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/project.js"></script>
   </body>
 </html>

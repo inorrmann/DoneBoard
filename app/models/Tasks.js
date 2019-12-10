@@ -29,13 +29,20 @@ module.exports = function (sequelize, DataTypes) {
     Task.belongsTo(models.Project, {
       foreignKey: {
         allowNull: false
-      }
+      },
+      onDelete: "cascade"
     });
     // one task belongsTo one user
     Task.belongsTo(models.User, {
       foreignKey: {
+<<<<<<< HEAD
+        allowNull: false
+      },
+      onDelete: "cascade"
+=======
         allowNull: true
       },
+>>>>>>> master
     });
   };
 

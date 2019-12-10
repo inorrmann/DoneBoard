@@ -30,18 +30,18 @@ validPhone(phone)
 // Uppercase initials on names below
 // ===========================================================================
 
-let name;
-// capitalize first letter on name
-function upperCase(name) {
-  let splitName = name.trim().toLowerCase().split(" ")
-  let resultStr = "";
-  splitName.forEach(word => {
-    resultStr += word.charAt(0).toUpperCase() + word.slice(1) + " ";
-    resultStr.trim();
-  });
-  name = resultStr.trim();
-  return name;
-};
+// let name;
+// // capitalize first letter on name
+// function upperCase(name) {
+//   let splitName = name.trim().toLowerCase().split(" ")
+//   let resultStr = "";
+//   splitName.forEach(word => {
+//     resultStr += word.charAt(0).toUpperCase() + word.slice(1) + " ";
+//     resultStr.trim();
+//   });
+//   name = resultStr.trim();
+//   return name;
+// };
 
 
 
