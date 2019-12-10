@@ -4,7 +4,7 @@ const express = require("express");
 const hbs = require("express-handlebars");
 const path = require("path");
 
-const db = require("./app/models");
+const db = require("./models");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -18,10 +18,10 @@ app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "/public")));
 
 // router connection (express)
-const projectsApiRoutes = require("./app/routes/projects-api-routes");
-const tasksApiRoutes = require("./app/routes/tasks-api-routes");
-const userApiRoutes = require("./app/routes/user-api-routes");
-const htmlRoutes = require("./app/routes/html-routes.js");
+const projectsApiRoutes = require("./routes/projects-api-routes");
+const tasksApiRoutes = require("./routes/tasks-api-routes");
+const userApiRoutes = require("./routes/user-api-routes");
+const htmlRoutes = require("./routes/html-routes.js");
 app.use("/api/", projectsApiRoutes)
 app.use("/api/", tasksApiRoutes)
 app.use("/api/", userApiRoutes)
