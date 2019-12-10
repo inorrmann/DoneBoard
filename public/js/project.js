@@ -1,6 +1,5 @@
 let collaborators = [];
 
-
 function addCollabs() {
   $("#addCollab").on("click", function() {
     event.preventDefault();
@@ -17,6 +16,21 @@ function addCollabs() {
     console.log(collaborators);
   });
 }
+
+$("#projects-form").on("submit", function() {
+  event.preventDefault();
+  let title = $("#projects-title").val();
+  // let projectObj = {
+  //     title: title,
+  //     collaborators: collaborators
+  // };
+  $.ajax({
+    data: { title: title, collaborators: collaborators },
+    url: "/api/projects",
+    method: "POST"
+  }).then(function(data) {});
+  console.log(projectObj);
+});
 
 // addBtn.addEventListener("clicked", function(){
 //     console.log("clicked");
