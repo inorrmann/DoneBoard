@@ -1,170 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css?family=Karla:200i,400,700,800&display=swap"
-      rel="stylesheet"
-    />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project Board</title>
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"
-      integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1"
-      crossorigin="anonymous"
-    ></script>
-    <!-- jquery CDN -->
-    <!-- Bootstrap CDN -->
-    <!-- Font Awesome link -->
-    <!-- script css -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div id="main">
-      <div id="to-do" class="card our-card" style="width: 18rem;">
-        <div class="card-body">
-          <div class="card-header-mine">
-            <div class="fa-2x">
-              </span>
-            </div>
-            <span><h4>TaskBoard</h4></span>
-            <a
-              class="add-item"
-              href="#"
-              data-toggle="modal"
-              data-target="#addItemModal"
-            >
-              <i class="fas fa-plus"></i>
-            </a>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Karla:200i,400,700,800&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Project Board</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"
+    integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1"
+    crossorigin="anonymous"></script>
+  <!-- jquery CDN -->
+  <!-- Bootstrap CDN -->
+  <!-- Font Awesome link -->
+  <!-- script css -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="doneboard">
+  <div id="doneboard-main">
+    <div id="to-do" class="card doneboard-card" style="width: 18rem;">
+      <div class="card-body">
+        <div class="doneboard-card-header">
+          <div class="fa-2x">
+            </span>
           </div>
-          <div class="todo-holder"></div>
+          <span>
+            <h4>To Do</h4>
+          </span>
+          <a class="doneboard-add-item text-secondary" href="#" data-toggle="modal" data-target="#addItemModal">
+            <i class="fas fa-plus"></i>
+          </a>
         </div>
-      </div>
-      <div id="in-progress" class="card our-card" style="width: 18rem;">
-        <div class="card-body">
-          <div class="card-header-mine">
-            <div class="fa-2x">
-              </span>
-            </div>
-            <span><h4>In Progress</h4></span>
-            <a
-              class="add-item"
-              href="#"
-              data-toggle="modal"
-              data-target="#addItemModal"
-              ><i class="fas fa-plus"></i
-            ></a>
-          </div>
-          <div class="todo-holder"></div>
-        </div>
-      </div>
-      <div id="done" class="card our-card" style="width: 18rem;">
-        <div class="card-body">
-          <div class="card-header-mine">
-            <div class="fa-2x">
-              </span>
-            </div>
-            <span><h4>DoneBoard</h4></span>
-            <a
-              class="add-item"
-              href="#"
-              data-toggle="modal"
-              data-target="#addItemModal"
-              ><i class="fas fa-plus"></i
-            ></a>
-          </div>
-          <div class="todo-holder"></div>
-        </div>
+        <div class="todo-holder"></div>
       </div>
     </div>
+    <div id="in-progress" class="card doneboard-card" style="width: 18rem;">
+      <div class="card-body">
+        <div class="doneboard-card-header">
+          <!-- <div class="fa-2x"> -->
+            </span>
+          <!-- </div> -->
+          <!-- <span class="text-center"> -->
+            <h4>In Progress</h4>
+          <!-- </span> -->
+          <!-- <a class="doneboard-add-item" href="#" data-toggle="modal" data-target="#addItemModal"><i
+              class="fas fa-plus"></i></a> -->
+        </div>
+        <div class="todo-holder"></div>
+      </div>
+    </div>
+    <div id="done" class="card doneboard-card" style="width: 18rem;">
+      <div class="card-body">
+        <div class="doneboard-card-header">
+          <!-- <div class="fa-2x"> -->
+            </span>
+          <!-- </div> -->
+          <!-- <span> -->
+            <h4>Done</h4>
+          <!-- </span> -->
+          <!-- <a class="doneboard-add-item" href="#" data-toggle="modal" data-target="#addItemModal"><i
+              class="fas fa-plus"></i></a> -->
+        </div>
+        <div class="todo-holder"></div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Add Item Modal -->
-    <div
-      class="modal fade"
-      id="addItemModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Please enter your information below:
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+  <!-- Add Item Modal -->
+  <div class="modal fade" id="addItemModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Please enter your information below:
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Inside the modal form-->
+        <form>
+          <div class="form-group doneboard-form-group">
+            <label for="taskTitleModal">Title</label>
+            <input type="text" class="form-control" id="taskTitleModal" placeholder="Enter task title">
           </div>
-<!-- Inside the modal form-->
-          <form>
-            <div class="form-group">
-              <label for="taskTitleModal">Title</label>
-              <input type="text" class="form-control" id="taskTitleModal" placeholder="Enter task title">
-            </div>
 
-            <div class="form-group">
-              <label for="taskDescriptionModal">Task</label>
-              <textarea type="text" class="form-control" id="taskDescriptionModal" placeholder="Enter task">
+          <div class="form-group doneboard-form-group">
+            <label for="taskDescriptionModal">Task</label>
+            <textarea type="text" class="form-control" id="taskDescriptionModal" placeholder="Enter task">
               </textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="taskNameModal">Name</label>
-              <input type="text" class="form-control" id="taskNameModal" placeholder="Enter name">
-            </div>
-
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                data-dismiss="modal"
-                id="save-changes"
-                type="submit"
-                class="btn btn-primary"
-              >
-                Save changes
-              </button>
-            </form>
           </div>
-        </div>
+
+          <div class="form-group doneboard-form-group">
+            <label for="taskNameModal">Name</label>
+            <input type="text" class="form-control" id="taskNameModal" placeholder="Enter name">
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              Close
+            </button>
+            <button data-dismiss="modal" id="save-changes" type="submit" class="btn btn-primary">
+              Save changes
+            </button>
+        </form>
       </div>
     </div>
-    <script src="../js/script.js"></script>
-  </body>
+  </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
 </html>

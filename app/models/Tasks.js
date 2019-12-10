@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   const Task = sequelize.define(
     "Task",
     {
@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
         defaultValue: 0,
         validate: {
-            len: [0,2]
+          len: [0, 2]
         }
       }
     },
@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes) {
     { timestamps: false }
   );
   // association
-  Task.associate = function(models) {
+  Task.associate = function (models) {
     // task belongsTo one project
     Task.belongsTo(models.Project, {
       foreignKey: {
@@ -35,9 +35,14 @@ module.exports = function(sequelize, DataTypes) {
     // one task belongsTo one user
     Task.belongsTo(models.User, {
       foreignKey: {
+<<<<<<< HEAD
         allowNull: false
       },
       onDelete: "cascade"
+=======
+        allowNull: true
+      },
+>>>>>>> master
     });
   };
 

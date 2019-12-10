@@ -1,50 +1,51 @@
-html {
-  background-color: #B2B3CF;
+.doneboard {
+  background-color: #b2b3cf;
 }
 
-.card {
-  min-width: 28%;
+.doneboard-card {
+  min-width: 28% !important;
 }
 
 .card-body {
-  height: 75%;
+  height: 75% !important;
 }
 
-.our-card {
-  font-family: 'Karla', sans-serif;
+.doneboard-card {
+  font-family: "Karla", sans-serif;
   font-weight: 700;
   height: 75vh;
   width: 50vw;
-  background-color: #232436; /* lightsteelblue/ghostwhite as other option. also 636483*/ 
+  /* background-color: #232436; /* lightsteelblue/ghostwhite as other option. also 636483*/
   color: whitesmoke;
+  background-color: #232436;
   margin: 0px 50px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.4) 4px 3px 8px;
 }
 
-#main {
+#doneboard-main {
   display: flex;
   margin-top: 6%;
-  background-color: #B2B3CF;
+  background-color: #b2b3cf;
   justify-content: center;
   align-items: center;
 }
 
-.card-header-mine {
+.doneboard-card-header {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.add-item {
+.doneboard-add-item {
   transform: scale(1);
   transition: all 0.5s;
 }
 
-.add-item:hover {
+.doneboard-add-item:hover {
   transform: scale(1.3);
 }
 
-.add-item:active {
+.doneboard-add-item:active {
   transform: scale(1.1);
 }
 
@@ -64,6 +65,10 @@ html {
   display: flex;
 }
 
+.doneboard-form-group {
+  margin: 5% 1% 1% 5%;
+}
+
 #taskTitleModal {
   width: 95%;
   margin: auto;
@@ -77,4 +82,82 @@ html {
 #taskNameModal {
   width: 95%;
   margin: auto;
+  margin-bottom: 5%;
+}
+
+
+
+
+/* beginning of index.html */
+
+
+/* the above is css for board.html */
+
+/* below is css for index.html */
+
+.index-body {
+  background-color: #232436;
+}
+
+.lead {
+  text-align: center;
+  /* background-color: #A7D2E8 */
+}
+
+.index-container {
+  background-color: #b2b3cf;
+  height: 15%;
+}
+
+/* .sign-in-jumbotron {
+  margin: 10% 10% 10% 10%;
+} */
+
+.instructions {
+  color: black;
+  text-align: center;
+}
+
+.jumbotron-fluid {
+  margin: 15% 0% 15% 0%;
+  background-color: #232436;
+}
+
+/* .sign-in-container {
+  margin: 1% 0% 1% 0%;
+} */
+
+/* .signup {
+  margin-left: 590px;
+  display: block;
+  flex: center;
+  background-color: #b2b3cf;
+} */
+
+/* input-bar is for user information */
+.input-bar {
+  width: 25%;
+  margin: auto;
+  display: block;
+  flex: center;
+  color: whitesmoke;
+}
+.submit {
+  margin: auto;
+  display: block;
+  flex: center;
+}
+.index-title {
+  color: white;
+  text-align: center;
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+}
+
+.form-control {
+  color: white;
+}
+
+.class-info {
+  color: white;
 }

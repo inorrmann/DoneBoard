@@ -9,13 +9,18 @@ router.post("/users", function(req, res) {
 
 router.get("/users", function (req, res) {
     db.User.findAll({
-        include: [db.Task]
+        order: ['id'],
+        include: [db.Task, db.Project]
     }).then(function(dbUser) {
         res.json(dbUser);
     });
 });
 
+<<<<<<< HEAD
 // this one is not working!
+=======
+// delete user will not delete a task
+>>>>>>> master
 router.delete("/users/:id", function(req, res) {
     db.User.destroy({
         where: {
