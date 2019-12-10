@@ -16,11 +16,7 @@ router.get("/users", function (req, res) {
     });
 });
 
-<<<<<<< HEAD
-// this one is not working!
-=======
 // delete user will not delete a task
->>>>>>> master
 router.delete("/users/:id", function(req, res) {
     db.User.destroy({
         where: {
