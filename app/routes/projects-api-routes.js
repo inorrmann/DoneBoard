@@ -1,22 +1,45 @@
 const db = require("../models");
 const router = require("express").Router();
 
-router.post("/projects", function(req, res) {
-    db.Project.create(req.body).then(function(dbProject) {
+// post new project and user relationship
+router.post("/projects", function (req, res) {
+// create the project
+    db.Project.create({
+        title: req.body.title
+    }).then(function (dbProject) {
+        // get all the users that are connected to the current project
+        db.User.findAll({
+            where: {
+                id: JSON.parse(req.body.UserIds)
+            }
+        }).then(function (dbUser) {
+            // loop through the array of users and create a connection 
+            // with the current project
+            dbUser.forEach(function(user) {
+                dbProject.addUser(user);
+            });
+        });
         return res.json(dbProject);
     });
-    // db.User_Project_Relationship.create({
-    //     // need to figure out what the entry for this needs to be
-    //     // if it's belongstoMany then there's no need to create this relationship since it's being created automatically
-    // })
 });
 
-
-router.get("/projects", function(req, res) {
+// get all projects and include associated tasks and users
+router.get("/projects", function (req, res) {
     db.Project.findAll({
         include: [db.Task, db.User]
-    }).then(function(dbProject) {
+    }).then(function (dbProject) {
         return res.json(dbProject)
+    })
+})
+
+
+// UserProject route USED ONLY FOR TESTING, NOT REALLY NEEDED
+// FOR THE WEBSITE, WE CAN DELETE IT ONCE WE DEPLOY
+router.get("/userproject", function (req, res) {
+    db.UserProject.findAll({
+
+    }).then(function (dbUserProject) {
+        return res.json(dbUserProject)
     })
 })
 
