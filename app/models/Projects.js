@@ -16,20 +16,13 @@ module.exports = function (sequelize, DataTypes) {
   Project.associate = function (models) {
     // project has many tasks
     Project.hasMany(models.Task, {
-      // foreignKey: {
-      //   allowNull: true
-      // }
       onDelete: "cascade"
     });
-    // // one project belongsTo one realtionship
-    // Project.belongsTo(models.User_Project_Relationship, {
-    //   foreignKey: {
-    //     allowNull: false
-    //   }
-    // });
+
     Project.belongsToMany(models.User, {
       through: 'UserProject',
-      foreignKey: 'UserId'
+      unique: false,
+      foreignKey: 'ProjectId'
     });
 
   };

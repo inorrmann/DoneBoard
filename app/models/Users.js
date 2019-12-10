@@ -33,24 +33,19 @@ module.exports = function (sequelize, DataTypes) {
   );
   // association
   User.associate = function (models) {
-    // // one user belongsTo one realtionship
-    // User.belongsTo(models.User_Project_Relationship, {
-    //   foreignKey: {
-    //     allowNull: true,
-    //     defaultValue: null
-    //   }
-    // });
+ 
     // user has many tasks
     User.hasMany(models.Task, {
       foreignKey: {
         allowNull: true
       }
-      // onDelete: 'CASCADE'
     });
 
+    // users belong to many projects
     User.belongsToMany(models.Project, {
       through: 'UserProject',
-      foreignKey: 'ProjectId',
+      unique: false,
+      foreignKey: 'UserId',
       onDelete: 'CASCADE'
     });
   };
