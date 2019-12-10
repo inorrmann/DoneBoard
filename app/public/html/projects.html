@@ -26,25 +26,62 @@
         crossorigin="anonymous"></script>
     <!-- {{!-- CSS --}} -->
     <link rel="stylesheet" href="../css/projects.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-</head>
-
-  <body class="projects-body">
-    <div class="container">
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"
+      integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <title>Create Project!</title>
+  </head>
+  <body>
+    <div class="projects-body">
+      <div class="container">
         <form class="projects-form">
-            <div class="form-group">
-              <label for="projects-title">What's your project's title?</label>
-              <input type="text" class="form-control" id="projects-title" aria-describedby="titleHelp">
-              <small id="titleHelp" class="form-text text-muted">This will be your group project's title.</small>
+          <div class="form-group">
+            <label for="projects-title">What's your project's title?</label>
+            <input
+              type="text"
+              class="form-control"
+              id="projects-title"
+              aria-describedby="titleHelp"
+            />
+            <label for="add-collaborator">Add a collaborator</label>
+            <div  class="input-group mx-auto border rounded">
+              <input type="text" class="form-control" name="addCollab" />
+              <button type="submit" id="addCollab" class="border-0">Add</button>
             </div>
+            <div id="collabDiv"></div>
+            <!-- <small id="" class="form-text text-warning">
+              JordanCley
+            </small> -->
             <div class="form-group">
-              <label for="projects-layout">Please choose your project's layout</label>
-              <input type="text" class="form-control" id="projects-layout">
+              <label for="projects-layout"
+                >Please choose your project's layout</label
+              >
+              <input type="text" class="form-control" id="projects-layout" />
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+            <button type="submit" class="btn btn-secondary">Create</button>
+          </div>
+        </form>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/project.js"></script>
   </body>
 </html>

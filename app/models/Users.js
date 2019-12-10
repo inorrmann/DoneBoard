@@ -14,10 +14,6 @@ module.exports = function (sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       },
-      password: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
       email: {
         type: DataTypes.STRING,
         allowNull: false
@@ -28,7 +24,7 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     // timestamps removed option for seeding db
-    // remove when ready fro createdAt columns
+    // remove when ready for createdAt columns
     { timestamps: false }
   );
   // association
