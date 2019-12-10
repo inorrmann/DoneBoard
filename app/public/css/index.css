@@ -6,11 +6,15 @@
     background-color: #B2B3CF;
 } 
 
- /* #user-info{
+ #user-info{
    background-color:  #6f4ae6; 
    margin-top: 200px;
+ } 
 
- }  */
+.sign-in-container {
+  margin: 25% 25% 25% 25%;
+}
+
 .instructions{
     color: black;
     text-align: center;

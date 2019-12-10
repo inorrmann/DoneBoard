@@ -94,35 +94,45 @@
 /* the above is css for board.html */
 
 /* below is css for index.html */
+
 .index-body {
   background-color: #232436;
 }
+
 .lead {
   text-align: center;
   /* background-color: #A7D2E8 */
 }
+
 .index-container {
   background-color: #b2b3cf;
+  height: 15%;
 }
 
-/* #user-info{
- background-color:  #6f4ae6; 
- margin-top: 200px;
+/* .sign-in-jumbotron {
+  margin: 10% 10% 10% 10%;
+} */
 
-}  */
 .instructions {
   color: black;
   text-align: center;
 }
+
 .jumbotron-fluid {
+  margin: 15% 0% 15% 0%;
   background-color: #232436;
 }
-.signup {
+
+/* .sign-in-container {
+  margin: 1% 0% 1% 0%;
+} */
+
+/* .signup {
   margin-left: 590px;
   display: block;
   flex: center;
   background-color: #b2b3cf;
-}
+} */
 
 /* input-bar is for user information */
 .input-bar {
@@ -142,10 +152,6 @@
   text-align: center;
   font-family: "Karla", sans-serif;
   font-weight: 800;
-}
-
-.sign-in-container {
-  margin: 25% 100% 25% 25%;
 }
 
 .form-control {
