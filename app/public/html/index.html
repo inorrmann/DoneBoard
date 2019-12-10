@@ -17,247 +17,118 @@
       integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
       crossorigin="anonymous"
     />
-    <!-- <link rel="stylesheet" href="../css/index.css"> -->
     <link rel="stylesheet" href="../css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Karla:200i,400,700,800&display=swap"
       rel="stylesheet"
     />
-    <!-- jquery CDN -->
-    <!-- Bootstrap CDN -->
-    <!-- Font Awesome link -->
-    <!-- script css -->
   </head>
 
   <body class="index-body">
     <div id= "user-info" class="jumbotron jumbotron-fluid" >
-      <div class="index-container">
+      <div class="index-container sign-in-container">
         <h1 class="index-title">DoneBoard</h1>
         <p class="instructions">Please enter your user information below.</p>
         <div class="text-center">
-          <button type="log" class="btn btn-primary btn-lg login-signup">
+          <button type="log" class="btn btn-primary btn-lg login-signup" id="loginButton">
             Log in
           </button>
-          <button type="sign" class="btn btn-primary btn-lg login-signup">
+          <button type="sign" class="btn btn-primary btn-lg login-signup" id="signinButton">
             Sign Up
           </button>
-        
         </div>
       </div>
-
       <!-- <button type="button" class="btn btn-secondary btn-lg">Large button</button> -->
     </div>
     <div id="log-in" class="jumbotron jumbotron-fluid">
-            <div class="index-container">
-              <h1 class="index-title">Log-in</h1>
-              <p class="instructions">Please enter your email and password.</p>
-            </div>
-            <form>
-                    <div class="input-bar">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="exampleInputEmail1"
-                        aria-describedby="emailHelp"
-                        placeholder="Enter email"
-                      />
-                     
-                    </div>
-                    <div class="input-bar">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="exampleInputPassword1"
-                        placeholder="Password"
-                      />
-                    </div>
-                  
-                            <div class="form-check">
-                           
-                            
-                            </div>
-                            <button type="submit" class="submit">Submit</button>
-                        
-          </div>
-          
-          <div class="jumbotron jumbotron-fluid">
-                <div class="index-container">
-                    <!-- <div class="row">
-                        <div class= "col-md-6">
-
-                        </div>
-                        <div class= "col-md-6">
-                            
-                            </div> -->
-                  <h1 class="index-title">Sign-up</h1>
-                  <p class="instructions">Please enter the required information below.</p>
-
-                </div>
-                
-                <form>
-                        <div class="input-bar">
-                                <label for ="exampleFormControlInput1" class="signup-info">First Name</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
-                              </div>
-                       
-                        <div class="input-bar">
-                                <label for= "exampleFormControlInput1" class="signup-info" >Last Name</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
-                              </div>
-                              <div class="input-bar">
-                                    <label for="exampleFormControlInput1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                                  </div>
-                               
-                                  <div class="input-bar">
-                                        <label for="phone">Phone Number</label>
-                                        <input class="form-control" type="tel" id="phone" name="phone"
-                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                        required placeholder="310-555-5555">
-                                                                        </div>
-                              <div class="input-bar">
-                                    <label for="exampleFormControlInput1">Username</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username">
-                                  </div>
-                                  <div class="input-bar">
-                                        <label for="exampleFormControlInput1">Password</label>
-                                        <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
-                                      </div>
-                                     
-                                            <!-- <div class="form-check">
-                                          
-                                            </div> -->
-                                            <button type="submit" class="submit">Submit</button>
-                                          
-                                    </div>
-                            
-                      
-                      </form>
-                      
-                       
-                        
-            
-    <!-- <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input
-          type="email"
-          class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-          placeholder="Enter email"
-        />
-        <small id="emailHelp" class="form-text text-muted"
-          >We'll never share your email with anyone else.</small
-        >
+      <div class="index-container">
+        <h1 class="index-title">Log-in</h1>
+        <p class="instructions">Please enter your email and password.</p>
       </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="exampleInputPassword1"
-          placeholder="Password"
-        />
-      </div> -->
-   
-
-    <!-- <button
-      type="button"
-      class="btn btn-primary"
-      data-toggle="modal"
-      data-target="#exampleModal"
-      data-whatever="@mdo"
-    >
-      Open modal for @mdo
-    </button>
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-toggle="modal"
-      data-target="#exampleModal"
-      data-whatever="@fat"
-    >
-      Open modal for @fat
-    </button>
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-toggle="modal"
-      data-target="#exampleModal"
-      data-whatever="@getbootstrap"
-    >
-      Open modal for @getbootstrap
-    </button> -->
-
-   <!-- <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    > 
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="recipient-name" class="col-form-label"
-                  >Recipient:</label
-                >
-                <input type="text" class="form-control" id="recipient-name" />
-              </div>
-              <div class="form-group">
-                <label for="message-text" class="col-form-label"
-                  >Message:</label
-                >
-                <textarea class="form-control" id="message-text"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Send message</button>
-          </div>
+      <form>
+        <div class="input-bar">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
         </div>
-      </div>
-    </div> -->
-    <!-- <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div class="input-bar">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-check">
+        </div>
+        <button type="submit" class="submit">Submit</button>
+    </div>
+  <div id="sign-in" class="jumbotron jumbotron-fluid">
+        <div class="index-container">
+            <!-- <div class="row">
+                <div class= "col-md-6">
+
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div> -->
-    <!-- <button type="submit" class="btn btn-primary">Submit</button>
-              </form> -->
-    <script src="../public/js/script.js"></script>
+                <div class= "col-md-6">
+                    
+                    </div> -->
+          <h1 class="index-title">Sign-up</h1>
+          <p class="instructions">Please enter the required information below.</p>
+
+        </div>
+        
+        <form>
+                <div class="input-bar">
+                        <label for ="exampleFormControlInput1" class="signup-info">First Name</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+                      </div>
+                
+                <div class="input-bar">
+                        <label for= "exampleFormControlInput1" class="signup-info" >Last Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+                      </div>
+                      <div class="input-bar">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                          </div>
+                        
+                          <div class="input-bar">
+                                <label for="phone">Phone Number</label>
+                                <input class="form-control" type="tel" id="phone" name="phone"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                required placeholder="310-555-5555">
+                                                                </div>
+                      <div class="input-bar">
+                            <label for="exampleFormControlInput1">Username</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username">
+                          </div>
+                          <div class="input-bar">
+                                <label for="exampleFormControlInput1">Password</label>
+                                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
+                              </div>
+                              
+                                    <!-- <div class="form-check">
+                                  
+                                    </div> -->
+                                    <button type="submit" class="submit">Submit</button>
+                            </div>
+              </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
   </body>
 </html>
+
+
+
+<!-- 
+  Add onclick function to buttons on index.html
+    should hide main container, while sliding the appropriate one up.
+  Adds go back button functionality to both options
+ -->

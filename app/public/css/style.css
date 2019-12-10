@@ -84,13 +84,12 @@
   margin: auto;
   margin-bottom: 5%;
 }
+
+
+
+
 /* beginning of index.html */
 
-.our-card {
-  height: 75vh;
-  background-color: #232436;
-  box-shadow: rgba(0, 0, 0, 0.4) 4px 3px 8px;
-}
 
 /* the above is css for board.html */
 
@@ -144,6 +143,11 @@
   font-family: "Karla", sans-serif;
   font-weight: 800;
 }
+
+.sign-in-container {
+  margin: 25% 5% 5% 25%
+}
+
 .form-control {
   color: white;
 }
