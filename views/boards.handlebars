@@ -1,0 +1,211 @@
+<div class="doneboards">
+        <div id="doneboard-main">
+            <div id="to-do" class="card doneboard-card mt-4" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="doneboard-card-header card-header">
+                        <div class="fa-2x">
+                        </div>
+                        <h4>To Do</h4>
+                        <a class="doneboard-add-item text-warning" href="#" data-toggle="modal"
+                            data-target="#addItemModal"><i class="fas fa-plus"></i></a>
+                    </div>
+                    {{!-- <!-- placeholder to put all the tasks with progress_status = 0 --> --}}
+                    {{each tasksTodo}}
+                    <form>
+                        <div class="card task-holder" style="width: 100%" type="submit" data-toggle="modal"
+                            data-target="#taskTodoModal">
+                            <div class="card-body">
+                                <h5 class="card-title text-dark">{{{Task name}}}</h5>
+                                <h6 class="card-subtitle mt-3 text-muted">Last edit: <span>&nbsp;</span>
+                                    {{{username}}}
+                                </h6>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- {{/each}} -->
+                </div>
+            </div>
+            <div id="in-progress" class="card doneboard-card mt-4" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="doneboard-card-header card-header">
+                        <h4>In Progress</h4>
+                    </div>
+                    <!-- placeholder to put all the tasks with progress_status = 1 -->
+                    <!-- {{each tasksInProgress}} -->
+                    <form>
+                        <div class="card task-holder" style="width: 100%" type="submit" data-toggle="modal"
+                            data-target="#taskInProgressModal">
+                            <div class="card-body">
+                                <h5 class="card-title text-dark">{{{Task name}}}</h5>
+                                <h6 class="card-subtitle mt-3 text-muted">Last edit: <span>&nbsp;</span>
+                                    {{{username}}}
+                                </h6>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- {{/each}} -->
+                </div>
+            </div>
+            <div id="done" class="card doneboard-card mt-4" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="doneboard-card-header card-header">
+                        <h4>Done</h4>
+                    </div>
+                    <!-- placeholder to put all the tasks with progress_status = 2 -->
+                    <!-- {{each tasksDone}} -->
+                    <form>
+                        <div class="card task-holder" style="width: 100%" type="submit" data-toggle="modal"
+                            data-target="#taskDoneModal">
+                            <div class="card-body">
+                                <h5 class="card-title text-dark">{{{Task name}}}</h5>
+                                <h6 class="card-subtitle mt-3 text-muted">Last edit: <span>&nbsp;</span>
+                                    {{{username}}}
+                                </h6>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- {{/each}} -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ****************************** EDIT TASK MODALS ****************************** -->
+        <!-- ToDo Task Modal -->
+        {{each taskTodoModal}}
+        <div class="modal taskModal" id="taskTodoModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{{Task name}}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{{Task content goes here}}}</p>
+                    </div>
+                    <!-- Update task that will be pushed into the string of content -->
+                    <form>
+                        <div class="form-group doneboard-form-group">
+                            <textarea type="text" class="form-control mb-4" id="taskName"
+                                placeholder="Add comments for this task "></textarea>
+                        </div>
+                        <div class="form-group doneboard-form-group">
+                            <input type="text" class="form-control mb-4" id="taskEditor"
+                                placeholder="Enter your username">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary">Save changes</button>
+                            <button type="button" id="nextStage" class="btn btn-secondary" data-dismiss="modal">Start
+                                Working on this Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+
+        <!-- In Progress Task Modal -->
+        {{each taskInProgressModal}}
+        <div class="modal taskModal" id="taskInProgressModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{{Task name}}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{{Task content goes here}}}</p>
+                    </div>
+                    <!-- Update task that will be pushed into the string of content -->
+                    <form>
+                        <div class="form-group doneboard-form-group">
+                            <textarea type="text" class="form-control mb-4" id="taskName"
+                                placeholder="Add comments for this task "></textarea>
+                        </div>
+                        <div class="form-group doneboard-form-group">
+                            <input type="text" class="form-control mb-4" id="taskEditor"
+                                placeholder="Enter your username">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary">Save changes</button>
+                            <button type="button" id="nextStage" class="btn btn-secondary" data-dismiss="modal">Done
+                                working on this!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+
+        <!-- Done Task Modal -->
+        {{each taskTodoModal}}
+        <div class="modal taskModal" id="taskDoneModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{{Task name}}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{{Task content goes here}}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+
+        <!-- ****************************** ADD TASK MODAL ****************************** -->
+        <!-- Add Item Modal -->
+        <div class="modal fade" id="addItemModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Please enter your information below:
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- Inside the modal form-->
+                    <form>
+                        <div class="form-group doneboard-form-group">
+                            <label for="taskTitleModal">Title</label>
+                            <input type="text" class="form-control" id="taskTitleModal" placeholder="Enter task title">
+                        </div>
+
+                        <div class="form-group doneboard-form-group">
+                            <label for="taskDescriptionModal">Task</label>
+                            <textarea type="text" class="form-control" id="taskDescriptionModal"
+                                placeholder="Enter task"></textarea>
+                        </div>
+
+                        <div class="form-group doneboard-form-group">
+                            <label for="taskNameModal">Name</label>
+                            <input type="text" class="form-control" id="taskNameModal" placeholder="Enter name">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Close
+                            </button>
+                            <button data-dismiss="modal" id="save-changes" type="submit" class="btn btn-secondary">
+                                Save changes
+                            </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/boards.js"></script>
