@@ -1,4 +1,4 @@
-var validator = require("validator")
+var validator = require("validator");
 
 
 // Verify email below
