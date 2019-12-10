@@ -141,3 +141,7 @@ body {
   color: white;
 }
 
+/* create page */
+.create-button {
+  margin: auto;
+}
