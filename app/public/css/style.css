@@ -1,5 +1,5 @@
-.doneboard {
-  background-color: #b2b3cf;
+body {
+  background-color: #232436;
 }
 
 .doneboard-card {
@@ -15,7 +15,6 @@
   font-weight: 700;
   height: 75vh;
   width: 50vw;
-  /* background-color: #232436; /* lightsteelblue/ghostwhite as other option. also 636483*/
   color: whitesmoke;
   background-color: #232436;
   margin: 0px 50px 25px 25px;
@@ -49,7 +48,13 @@
   transform: scale(1.1);
 }
 
-/* Modal */
+.login-signup {
+  flex: auto;
+  display: inline;
+  margin: auto;
+}
+
+/* Modal on doneboards.html below*/
 
 .modal-content {
   background-color: #232436;
@@ -85,56 +90,27 @@
   margin-bottom: 5%;
 }
 
-
-
-
 /* beginning of index.html */
 
-
-/* the above is css for board.html */
-
-/* below is css for index.html */
-
-.index-body {
-  background-color: #232436;
-}
-
-.lead {
-  text-align: center;
-  /* background-color: #A7D2E8 */
-}
-
 .index-container {
-  background-color: #b2b3cf;
+  background-color: #595C6B;
   height: 15%;
 }
 
-/* .sign-in-jumbotron {
-  margin: 10% 10% 10% 10%;
-} */
-
 .instructions {
-  color: black;
+  color: white;
   text-align: center;
 }
 
-.jumbotron-fluid {
+.sign-in-jumbotron {
   margin: 15% 0% 15% 0%;
   background-color: #232436;
 }
 
-/* .sign-in-container {
-  margin: 1% 0% 1% 0%;
-} */
+.jumbotron-fluid {
+  background-color: #232436;
+}
 
-/* .signup {
-  margin-left: 590px;
-  display: block;
-  flex: center;
-  background-color: #b2b3cf;
-} */
-
-/* input-bar is for user information */
 .input-bar {
   width: 25%;
   margin: auto;
@@ -142,16 +118,19 @@
   flex: center;
   color: whitesmoke;
 }
+
 .submit {
   margin: auto;
   display: block;
   flex: center;
 }
+
 .index-title {
   color: white;
   text-align: center;
   font-family: "Karla", sans-serif;
   font-weight: 800;
+  font-size: 500%;
 }
 
 .form-control {
@@ -161,3 +140,4 @@
 .class-info {
   color: white;
 }
+
