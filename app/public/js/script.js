@@ -1,5 +1,6 @@
 var validator = require("validator")
 
+
 // Verify email below
 // ===========================================================================
 
@@ -44,16 +45,4 @@ function upperCase(name) {
 
 
 
-
-
-
-// html below for phone number
-/*
-<label for="phone">Enter your phone number:</label>
-
-<input type="tel" id="phone" name="phone"
-       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-       required>
-
-<small>Format: 123-456-7890</small>
-*/
+module.exports = validEmail;
