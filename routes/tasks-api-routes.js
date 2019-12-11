@@ -2,6 +2,8 @@ const db = require("../models");
 const router = require("express").Router();
 
 
+
+
 router.get("/tasks", function (req, res) {
     db.Task.findAll({}).then(function (dbTask) {
         res.json(dbTask);
