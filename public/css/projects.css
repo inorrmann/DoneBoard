@@ -11,3 +11,27 @@ body {
   margin: 25% 25% 25% 25%;
   color: white
 }
+
+/* jumbotron below */
+
+.index-container {
+  background-color: #595C6B;
+  height: 15%;
+}
+
+.index-title {
+  color: white;
+  text-align: center;
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+  font-size: 500%;
+}
+
+.sign-in-jumbotron {
+  margin: 15% 0% 15% 0%;
+  background-color: #232436;
+}
+
+.jumbotron-fluid {
+  background-color: #232436;
+}
