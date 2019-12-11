@@ -8,14 +8,14 @@ body {
 }
 
 .projects-form {
-  margin: 25% 25% 25% 25%;
+  margin: 0% 25% 25% 25%;
   color: white
 }
 
 /* jumbotron below */
 
 .index-container {
-  background-color: #595C6B;
+  background-color: #717a81;
   height: 15%;
 }
 
