@@ -1,11 +1,21 @@
-$("#registerBtn").on("submit", function() {
+
+$("#register-form").on("submit", function () {
     event.preventDefault();
-    let title = $("#projects-title").val();
-    
-    $.ajax({
-      data: { first_name: title, last_name: collaborators, username: , email: , phone_number: },
-      url: "/api/projects",
-      method: "POST"
-    }).then(function(data) {});
-    console.log(projectObj);
-  });
+    console.log("clicked");
+
+    var first_name = document.querySelector("#register-form [name=registerInput1]").value.trim();
+    var last_name = document.querySelector("#register-form [name=registerInput2]").value.trim();
+    var username = document.querySelector("#register-form [name=registerInput3]").value.trim();
+    var email = document.querySelector("#register-form [name=registerInput4]").value.trim();
+    var phone_number = document.querySelector("#register-form [name=phone]").value.trim();
+
+    let newUser = { first_name: first_name, last_name: last_name, username: username, email: email, phone_number: phone_number }
+    $.ajax("/api/users", {
+        type: "POST",
+        data: newUser
+    }).then(function () {
+        // move to the dashboard page
+        location.href = "/dashboard"
+        console.log("ajax completed")
+    });
+});
