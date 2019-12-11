@@ -1,8 +1,9 @@
 <div class="sign-in-jumbotron">
     <div id="user-info" class="jumbotron jumbotron-fluid jumbotron-landing-page">
         <div class="index-container text-center sign-in-container">
-            <h1 class="index-title pt-4 mb-4">View or Create Project</h1>
-
+            {{#each welcome}}
+            <h1 class="index-title pt-4 mb-4">Welcome <span id="dashboard-username" name="username">{{username}} </span>!</h1>
+            {{/each}}
             <div class="text-center">
                 <button type="view" class="btn btn-info btn-lg d-inline my-4 mr-2" id="viewButton">
                     View Project

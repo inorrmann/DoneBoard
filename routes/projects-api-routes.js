@@ -65,7 +65,7 @@ router.get("/projects/:username", function (req, res) {
         //     }).then(function (dbProject) {
         //         return res.json(dbProject)
         //     })
-        // })
+        })
     })
 })
 

@@ -1,4 +1,4 @@
-
+// on click event for register form that will redirects to dashboard
 $("#register-form").on("submit", function () {
     event.preventDefault();
     console.log("clicked");
@@ -14,8 +14,8 @@ $("#register-form").on("submit", function () {
         type: "POST",
         data: newUser
     }).then(function () {
-        // move to the dashboard page
-        location.href = "/dashboard"
-        console.log("ajax completed")
-    });
+
+        // move to the dashboard page for this particular username
+        location.href = `/dashboard/${newUser.username}`
+    })
 });
