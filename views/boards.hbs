@@ -15,7 +15,7 @@
                     <div class="card task-holder" style="width: 100%" type="submit" data-toggle="modal"
                         data-target="#taskTodoModal">
                         <div class="card-body">
-                            <h5 class="card-title text-dark">{{{Task name}}}</h5>
+                            <h5 class="card-title text-dark">{{{name}}}</h5>
                             <h6 class="card-subtitle mt-3 text-muted">Last edit: <span>&nbsp;</span>
                                 {{{username}}}
                             </h6>
@@ -36,7 +36,7 @@
                     <div class="card task-holder" style="width: 100%" type="submit" data-toggle="modal"
                         data-target="#taskInProgressModal">
                         <div class="card-body">
-                            <h5 class="card-title text-dark">{{{Task name}}}</h5>
+                            <h5 class="card-title text-dark">{{{name}}}</h5>
                             <h6 class="card-subtitle mt-3 text-muted">Last edit: <span>&nbsp;</span>
                                 {{{username}}}
                             </h6>
@@ -57,7 +57,7 @@
                     <div class="card task-holder" style="width: 100%" type="submit" data-toggle="modal"
                         data-target="#taskDoneModal">
                         <div class="card-body">
-                            <h5 class="card-title text-dark">{{{Task name}}}</h5>
+                            <h5 class="card-title text-dark">{{{name}}}</h5>
                             <h6 class="card-subtitle mt-3 text-muted">Last edit: <span>&nbsp;</span>
                                 {{{username}}}
                             </h6>
@@ -72,18 +72,18 @@
 
     {{!-- <!-- ****************************** EDIT TASK MODALS ****************************** --> --}}
     {{!-- <!-- ToDo Task Modal --> --}}
-    {{#each taskTodoModal}}
+    {{#each tasksTodo}}
     <div class="modal taskModal" id="taskTodoModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">{{{Task name}}}</h5>
+                    <h5 class="modal-title">{{{name}}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>{{{Task content goes here}}}</p>
+                    <p>{{{content}}}</p>
                 </div>
                 {{!-- <!-- Update task that will be pushed into the string of content --> --}}
                 <form>
@@ -107,18 +107,18 @@
 
 
     {{!-- <!-- In Progress Task Modal --> --}}
-    {{#each taskInProgressModal}}
+    {{#each tasksInProgress}}
     <div class="modal taskModal" id="taskInProgressModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">{{{Task name}}}</h5>
+                    <h5 class="modal-title">{{{name}}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>{{{Task content goes here}}}</p>
+                    <p>{{{content}}}</p>
                 </div>
                 {{!-- <!-- Update task that will be pushed into the string of content --> --}}
                 <form>
@@ -142,18 +142,18 @@
 
 
     <!-- Done Task Modal -->
-    {{#each taskTodoModal}}
+    {{#each tasksDone}}
     <div class="modal taskModal" id="taskDoneModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">{{{Task name}}}</h5>
+                    <h5 class="modal-title">{{{name}}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>{{{Task content goes here}}}</p>
+                    <p>{{{content}}}</p>
                 </div>
             </div>
         </div>
@@ -176,7 +176,7 @@
                     </button>
                 </div>
                 {{!-- <!-- Inside the modal form--> --}}
-                <form>
+                <form id="addTaskForm">
                     <div class="form-group doneboard-form-group">
                         <label for="taskTitleModal">Title</label>
                         <input type="text" class="form-control" id="taskTitleModal" placeholder="Enter task title">
@@ -206,3 +206,4 @@
     </div>
 </div>
 <script src="js/index.js"></script>
+<script src="js/tasks.js"></script>
