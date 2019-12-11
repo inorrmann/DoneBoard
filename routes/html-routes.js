@@ -56,9 +56,46 @@ router.get("/dashboard", function (req, res) {
 });
 
 router.get("/dashboard/:username", function (req, res) {
-  console.log(req.params);
-  var username = {username: req.params};
-  res.render("dashboard", { welcome: username });
+  // console.log(req.params.username);
+  var username = { username: req.params.username };
+  db.User.findAll({
+    where: {
+      username: req.params.username
+    }
+  }).then(function (dbUser) {
+    res.render("dashboard", { welcome: dbUser[0].dataValues });
+    // console.log(dbUser[0].dataValues)
+  })
+
 });
+
+
+router.get("/projects/:username", function (req, res) {
+  console.log("routing");
+
+  
+  db.User.findAll({
+    where: {
+      username: req.params.username
+    }
+  }).then(function (dbUser) {
+    console.log(dbUser[0].dataValues)
+    db.UserProject.findAll({
+      where: {
+        UserId: dbUser[0].dataValues.id
+      }
+    }).then(function (dbUserProject) {
+      let projects = [];
+
+      dbUserProject.forEach(function (connection) {
+        projects.push(connection.dataValues);
+      })
+      console.log(projects)
+
+    })
+  })
+})
+
+
 
 module.exports = router;

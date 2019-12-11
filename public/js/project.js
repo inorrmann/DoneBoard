@@ -56,7 +56,9 @@ $(document).ready(function() {
       data: { title: title, username: collaborators},
       url: "/api/projects",
       method: "POST"
-    }).then(function(data) {});
-    location.href = "/boards";
+    }).then(function(data) {
+
+      location.href = "/boards";
+    });
   });
 });

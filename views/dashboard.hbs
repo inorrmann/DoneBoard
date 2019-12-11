@@ -1,17 +1,14 @@
 <div class="sign-in-jumbotron">
     <div id="user-info" class="jumbotron jumbotron-fluid jumbotron-landing-page">
         <div class="index-container text-center sign-in-container">
-            {{#each welcome}}
-            <h1 class="index-title pt-4 mb-4">Welcome <span id="dashboard-username" name="username">{{username}} </span>!</h1>
-            {{/each}}
+            {{#with welcome}}
+            <h1 class="index-title pt-4 mb-4">Welcome {{first_name}} !</h1>
+            <span class="text-secondary" id="dashboard-username" name="username">{{username}} </span>
+            {{/with}}
             <div class="text-center">
-                <button type="view" class="btn btn-info btn-lg d-inline my-4 mr-2" id="viewButton">
-                    View Project
-                </button>
+                <button class="btn btn-info btn-lg d-inline my-4 mr-2" id="viewButton">View Project</button>
                 <a href="/projects">
-                    <button type="create" class="btn btn-info btn-lg d-inline my-4 ml-2" id="createButton">
-                        Create New Project
-                    </button>
+                    <button class="btn btn-info btn-lg d-inline my-4 ml-2" id="createButton">Create New Project</button>
                 </a>
             </div>
         </div>
@@ -19,4 +16,5 @@
 </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> --}}
+<script src="/js/dashboard.js"></script>
