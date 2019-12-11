@@ -3,7 +3,7 @@ const router = require("express").Router();
 
 // post new project and user relationship
 router.post("/projects", function (req, res) {
-// create the project
+    // create the project
     db.Project.create({
         title: req.body.title
     }).then(function (dbProject) {
@@ -15,7 +15,7 @@ router.post("/projects", function (req, res) {
         }).then(function (dbUser) {
             // loop through the array of users and create a connection 
             // with the current project
-            dbUser.forEach(function(user) {
+            dbUser.forEach(function (user) {
                 dbProject.addUser(user);
             });
         });
@@ -23,12 +23,12 @@ router.post("/projects", function (req, res) {
     });
 });
 
-router.delete("/projects/:id", function(req, res) {
+router.delete("/projects/:id", function (req, res) {
     db.Project.destroy({
         where: {
             id: req.params.id
         }
-    }).then(function(dbProject) {
+    }).then(function (dbProject) {
         res.json(dbProject)
     });
 });
@@ -39,6 +39,33 @@ router.get("/projects", function (req, res) {
         include: [db.Task, db.User]
     }).then(function (dbProject) {
         return res.json(dbProject)
+    })
+})
+
+
+// get all projects associated with a username
+router.get("/projects/:username", function (req, res) {
+    // find the corresponding id to the username
+    db.User.findOne({
+        where: {
+            username: req.params.username
+        }
+    }).then(function (dbUser) {
+        console.log(dbUser.dataValues.id);
+
+        db.UserProject.findAll({
+
+        // }).then(function (dbUserProject) {
+
+        //     db.Project.findAll({
+        //         where: {
+        //             id: req.params.id
+        //         },
+        //         include: [db.Task, db.User]
+        //     }).then(function (dbProject) {
+        //         return res.json(dbProject)
+        //     })
+        // })
     })
 })
 
