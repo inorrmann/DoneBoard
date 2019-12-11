@@ -24,7 +24,7 @@ body {
 #doneboard-main {
   display: flex;
   margin-top: 6%;
-  background-color: #595C6B;
+  background-color: #717a81;
   justify-content: center;
   align-items: center;
 }
@@ -93,7 +93,7 @@ body {
 /* beginning of index.html */
 
 .index-container {
-  background-color: #595C6B;
+  background-color: #717a81;
   height: 15%;
 }
 
