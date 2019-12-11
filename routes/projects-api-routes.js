@@ -10,7 +10,7 @@ router.post("/projects", function (req, res) {
         // get all the users that are connected to the current project
         db.User.findAll({
             where: {
-                id: JSON.parse(req.body.UserIds)
+                username: req.body.username
             }
         }).then(function (dbUser) {
             // loop through the array of users and create a connection 

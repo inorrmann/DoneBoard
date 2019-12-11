@@ -47,10 +47,10 @@ $(document).ready(function() {
     event.preventDefault();
     let title = $("#projects-title").val();
     $.ajax({
-      data: { title: title, collaborators: collaborators },
+      data: { title: title, username: collaborators},
       url: "/api/projects",
       method: "POST"
     }).then(function(data) {});
-    console.log(projectObj);
+    // location.assign("/boards.hbs");
   });
 });
