@@ -4,25 +4,25 @@
     <p class="instructions mt-4 pb-4">You don't have to enter the information below. It's fine... I guess.</p>
   </div>
 
-  <form>
+  <form id="register-form">
     <div class="input-bar mt-4">
-      <label for="exampleFormControlInput1" class="signup-info">First Name</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" required placeholder="First Name">
+      <label for="registerInput1" class="signup-info">First Name</label>
+      <input type="text" class="form-control" id="registerInput1" name="registerInput1" required placeholder="First Name">
     </div>
 
     <div class="input-bar pt-3">
-      <label for="exampleFormControlInput2" class="signup-info">Last Name</label>
-      <input type="text" class="form-control" id="exampleFormControlInput2" required placeholder="Last Name">
+      <label for="registerInput2" class="signup-info">Last Name</label>
+      <input type="text" class="form-control" id="registerInput2" name="registerInput2" required placeholder="Last Name">
     </div>
 
     <div class="input-bar pt-3">
-      <label for="exampleFormControlInput3">Username</label>
-      <input type="text" class="form-control" id="exampleFormControlInput3" required placeholder="Username">
+      <label for="registerInput3">Username</label>
+      <input type="text" class="form-control" id="registerInput3" name="registerInput3" required placeholder="Username">
     </div>
 
     <div class="input-bar pt-3">
-      <label for="exampleFormControlInput4">Email address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput4" required placeholder="name@example.com">
+      <label for="registerInput4">Email address</label>
+      <input type="email" class="form-control" id="registerInput4" name="registerInput4" required placeholder="name@example.com">
     </div>
 
     <div class="input-bar pt-3">
@@ -32,11 +32,11 @@
     </div>
 
     <div class="d-flex justify-content-center">
-      <button type="submit" class="btn btn-primary btn-lg  mt-4 bg-info" id="registerBtn">
-        Register
-      </button>
+        <button type="submit" class="btn btn-primary btn-lg  mt-4 bg-info border-info" id="registerBtn">
+          Register
+        </button>
     </div>
 </div>
 </form>
-<script src="../js/script.js"></script>
+{{!-- <script src="js/script.js"></script> --}}
 <script src="js/index.js"></script>
