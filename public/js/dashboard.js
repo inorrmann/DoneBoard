@@ -1,8 +1,10 @@
-$("#create").on("submit", function(){
+
+$("#createButton").on("click", function(){
+    console.log("clicked");
     $.ajax({
-        url: "/api/projects",
-        method: "GET"
+        method: "GET",
+        url: "/api/users"
     }).then(function(data){
         console.log(data);
-    });
+    })
 });
