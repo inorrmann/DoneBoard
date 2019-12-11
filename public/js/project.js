@@ -51,6 +51,6 @@ $(document).ready(function() {
       url: "/api/projects",
       method: "POST"
     }).then(function(data) {});
-    // location.assign("/boards.hbs");
+    location.href = "/boards";
   });
 });
