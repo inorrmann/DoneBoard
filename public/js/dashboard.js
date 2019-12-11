@@ -12,14 +12,16 @@
 $("#viewButton").on("click", function () {
     console.log("clicked");
     let username = document.querySelector("#user-info [name=username]").textContent;
-    console.log(username);
+    // console.log(username);
 
     $.ajax({
         method: "GET",
-        url: `/projects/${username}`
+        url: `/api/projects/${username}`
     }).then(function (data) {
-        // console.log(data);
-        console.log("ajax call completed")
+        console.log(data);
+        location.href = `/projectscreated/${data.username}`
+
+        // console.log("ajax call completed")
     });
 })
 

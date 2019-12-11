@@ -70,32 +70,5 @@ router.get("/dashboard/:username", function (req, res) {
 });
 
 
-router.get("/projects/:username", function (req, res) {
-  console.log("routing");
-
-  
-  db.User.findAll({
-    where: {
-      username: req.params.username
-    }
-  }).then(function (dbUser) {
-    console.log(dbUser[0].dataValues)
-    db.UserProject.findAll({
-      where: {
-        UserId: dbUser[0].dataValues.id
-      }
-    }).then(function (dbUserProject) {
-      let projects = [];
-
-      dbUserProject.forEach(function (connection) {
-        projects.push(connection.dataValues);
-      })
-      console.log(projects)
-
-    })
-  })
-})
-
-
 
 module.exports = router;
