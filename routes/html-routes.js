@@ -19,6 +19,10 @@ router.get("/register",function(req, res){
 
 router.get("/boards",function(req, res){
     return res.render("boards");
+});
+
+router.get("/dashboard",function(req, res){
+    return res.render("dashboard");
 })
 
 module.exports = router
